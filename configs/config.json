@@ -1,0 +1,17 @@
+{
+  "KafkaConfiguration" : {
+    "kafkaVersion" : "2.6.0",
+    "brokers" : "localhost:9092",
+    "topics" : [
+      {
+        "ToTopic" : "munsal.case.study.product.topic.retry",
+        "FromTopic" : "munsal.case.study.product.topic.error",
+        "retryCount": 1,
+        "isInfinite": true,
+        "taskRunDuration": "10",
+        "period": "1m"
+      }
+    ],
+    "groupName": "x.group"
+  }
+}
